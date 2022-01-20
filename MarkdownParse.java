@@ -21,7 +21,7 @@ public class MarkdownParse {
             //toReturn.add(markdown.substring(openParen + 1, closeParen));
 
             //FIXED VERSION
-            if(markdown.substring(nextOpenBracket + 1, nextCloseBracket).equals("Link")){
+            if(markdown.charAt(nextOpenBracket - 1) != '!'){
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
             currentIndex = closeParen + 1;
