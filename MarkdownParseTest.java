@@ -22,12 +22,6 @@ public class MarkdownParseTest {
         expected2.add("https://www.newlink.com"); 
         expected2.add(" ");
 
-        //String fileContents = 
-
-        assertEquals("When there is one link and one ()[ ]", 
-        expected2, MarkdownParse.getLinks(" # Test file [Link](https://www.newlink.com)
-        ![Image](https://animals.net/wp-content/uploads/2019/01/Water-Dragon-5.jpg)'''[]( )''' ")); 
-
         try {
             assertEquals("When there is one link and one ()[ ]", 
             expected2, MarkdownParse.getLinks(Files.readString(Path.of("test.md"))));
@@ -36,7 +30,7 @@ public class MarkdownParseTest {
         }
 
         try {
-            assertEquals expected2, MarkdownParse.getLinks(Files.readString(Path.of("test-file.md"))));
+            assertEquals(expected2, MarkdownParse.getLinks(Files.readString(Path.of("test-file.md"))));
         } catch (IOException e) {
             e.printStackTrace();
         }
