@@ -47,9 +47,9 @@ public class MarkdownParse {
             }
 
             //System.out.println(markdown.substring(nextOpenBracket, nextCloseBracket)); 
-            //if(markdown.substring(nextOpenBracket + 1, nextCloseBracket).equals("")){
-            //    continue; 
-            //} 
+            if(markdown.substring(nextOpenBracket + 1, nextCloseBracket).equals("")){
+                continue; 
+            } 
 
             if (isImage == false) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
