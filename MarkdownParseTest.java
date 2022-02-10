@@ -29,11 +29,13 @@ public class MarkdownParseTest {
             e.printStackTrace();
         }
 
+        /*
         try {
             assertEquals(expected2, MarkdownParse.getLinks(Files.readString(Path.of("test-file.md"))));
         } catch (IOException e) {
             e.printStackTrace();
         }
+        */
     }
 
     /*
